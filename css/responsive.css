@@ -1,0 +1,41 @@
+/*Smartphones*/
+@media (min-width: 320px) {}
+
+/*Tablets*/
+@media (min-width: 576px) {
+    
+    #email-phone {
+        gap: 8px
+    }
+    #email-phone i {
+        font-size: 15px;
+    }
+}
+
+/*Laptops*/
+@media (min-width: 1024px) {
+
+    header {
+        height: 80px;
+    }
+    .logo {
+        height: 65px;
+    }
+}
+
+/*Desktop*/
+@media (min-width: 1440px) {
+
+    header {
+        height: 90px;
+    }
+    .logo {
+        height: 75px;
+    }
+    a.nav-link {
+        font-size: 15px;
+    }
+}
+
+/*Large Desktop*/
+@media (min-width: 2560px) {}

@@ -1,0 +1,311 @@
+/* Estilos Generales */
+
+:root {
+    --amarillo-claro: #FFFFE0;
+    --verde-oscuro: #628010;
+    --verde-amarronado: #636212;
+    --marron: #7A5839;
+    --marron-claro: #FFEDCD;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Alata", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+/* HEADER - INICIO */
+
+header {
+    height: 70px;
+}
+
+.navbar {
+    background-color: var(--amarillo-claro);
+    font-weight: 700;
+    height: inherit;
+}
+
+.logo {
+    height: 55px;
+}
+
+a.nav-link {
+    font-size: 13px;
+    color: var(--verde-oscuro);
+    position: relative;
+    transition: color .4s;
+}
+
+a.nav-link:focus {
+    color: var(--verde-oscuro);
+}
+
+a.nav-link:hover {
+    color: var(--marron);
+}
+
+/*Navbar links efecto hover - Inicio*/
+a.nav-link:not(#offcanvasNavbar.show a.nav-link, #offcanvasNavbar.showing a.nav-link):after {
+    transition: all .4s;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: ' ';
+    color: transparent;
+    background: var(--marron);
+    height: 2px;
+}
+
+a.nav-link:not(#offcanvasNavbar.show a.nav-link, #offcanvasNavbar.showing a.nav-link):hover:after {
+    width: 95%;
+}
+/*Navbar links efecto hover - Fin*/
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+#offcanvasNavbar {
+    background-color: var(--amarillo-claro);
+}
+
+#offcanvasNavbar.showing a.nav-link,
+#offcanvasNavbar.show a.nav-link {
+    font-size: 16px;
+}
+
+.offcanvas-contact-info {
+    margin-top: 75px;
+}
+
+.offcanvas-contact-info a {
+    color: var(--verde-oscuro);
+    text-decoration: none;
+}
+
+/* HEADER - FIN */
+
+
+/* MAIN - INICIO */
+
+/* Banner */
+
+#banner img {
+    width: 100%;
+    min-height: 260px;
+    max-height: 720px;
+    object-fit: cover;
+}
+
+
+
+/* Sección Productos */
+
+#products,
+#us {
+    background-color: var(--amarillo-claro);
+}
+
+#products,
+#services,
+#us,
+#contact {
+    scroll-margin-top: 90px;
+}
+
+.title {
+    color: var(--verde-oscuro);
+    font-weight: 600;
+}
+
+.card {
+    height: 290px;
+    max-width: 315px;
+    background-color: var(--marron-claro);
+    border: 3px solid var(--verde-oscuro);
+}
+
+.card-icon {
+    margin-bottom: 7px;
+}
+
+.card img {
+    height: 60%;
+    object-fit: cover;
+}
+
+.card-title,
+.card-text {
+    color: var(--verde-oscuro);
+}
+
+.card-title {
+    font-weight: 600;
+    margin: 5px 0 15px 0;
+}
+
+
+
+/* Sección Servicios */
+
+#services {
+    background-color: var(--marron-claro);
+}
+
+#services .title {
+    color: var(--verde-amarronado);
+}
+
+#services .card {
+    background-color: var(--amarillo-claro);
+    border-color: var(--verde-amarronado);
+}
+
+#services .card-title,
+#services .card-text {
+    color: var(--verde-amarronado);
+}
+
+
+
+/* Botones de Contacto */
+
+.contact-buttons {
+    margin-top: 75px;
+}
+
+#ws-button,
+#visit-us-button {
+    width: 150px;
+    padding: 10px;
+    font-size: 15px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+#ws-button {
+    background-color: #08C50F;
+}
+
+#visit-us-button {
+    background-color: #2658D9;
+}
+
+#ws-button:hover {
+    background-color: #08b30e;
+}
+
+#visit-us-button:hover {
+    background-color: #204ab3;
+}
+
+
+
+/* Sección Nosotros */
+
+#us {
+    color: var(--verde-oscuro);
+}
+
+#our-history p,
+#our-vision p,
+.modal-body {
+    text-align: justify;
+}
+
+#us a {
+    color: var(--verde-oscuro);
+    font-weight: 600;
+}
+
+#us a:hover {
+    border-bottom: 2px solid var(--verde-oscuro);
+}
+
+.modal-content {
+    border: 3px solid var(--verde-oscuro);
+    background-color: var(--amarillo-claro);
+}
+
+
+
+/* Carrusel */
+
+.splide__slide img {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* MAIN - FIN */
+
+
+/* FOOTER - INICIO */
+
+footer {
+    background-color: var(--marron);
+    color: var(--marron-claro);
+}
+
+footer .title {
+    color: var(--marron-claro);
+}
+
+footer p {
+    margin-bottom: 8px;
+}
+
+footer a {
+    color: var(--marron-claro);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--amarillo-claro);
+}
+
+footer #visit-us-button {
+    padding: 8px;
+}
+
+footer .google-maps {
+    height: 175px;
+    width: 100%;
+}
+
+footer iframe {
+    border-radius: 5px;
+}
+
+#email-phone {
+    gap: 35px
+}
+
+#email-phone i {
+    font-size: 25px;
+}
+
+/* FOOTER - FIN */
